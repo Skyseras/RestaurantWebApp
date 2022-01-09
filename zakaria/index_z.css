@@ -37,6 +37,7 @@ body nav a{
 }
 body nav a h4:hover{
     background-color: #FFC420;
+    padding: 5px;
 }
 
 
@@ -478,74 +479,125 @@ body .meal_of_weeks .meal_of_week .articles input{
 
 
 
+
+
 /**** Debut Debut Team -- Our Chefs ****/
-body .our-chefs{
+body .team_our_chefs{
     margin-top: 100px;
+    width: 100%;
 }
-body .our-chefs h2{
+body .team_our_chefs h2{
+    text-align: center;
+}
+body .team_our_chefs h1{
     text-align: center;
     color: #FFC420;
 }
-body .our-chefs h1{
-    text-align: center;
+body .team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-body .our-chefs .chef{
+body .team_our_chefs .our_chefs{
+    margin-top: 50px;
+    width: 22%;
     border: 1px solid #FFA323;
     background-color: white;
-    width: 21%;
-    min-height: 100px;
-    position: absolute;
 }
-body .our-chefs .chef img{
+body .team_our_chefs .our_chefs img{
     width: 100%;
+    position: relative;
+    transition-delay: 1s;
 }
-body .our-chefs .chef h3{
+body .team_our_chefs .our_chefs:hover img{
+    opacity: 40%;
+    transition-delay: 0.25s;
+}
+body .team_our_chefs .our_chefs h3{
     text-align: center;
 }
-body .our-chefs .chef h4{
+body .team_our_chefs .our_chefs h4{
     text-align: center;
     color: grey;
+    margin-bottom: 40px;
+}
+body .team_our_chefs .our_chefs .inf_chef{
+    position: relative;
+    width: 0%;
+    display: flex;
+    margin-left: 48%;
+    transition: width;
+    transition-duration: 0.25s;
+}
+body .team_our_chefs .our_chefs:hover .inf_chef{
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
+    transition-duration: 0.1s;
 }
 
 
-body .our-chefs .border1{
-    position: relative;
+body .team_our_chefs .our_chefs .bag_team_our_chefs div:first-child{
+    position: absolute;
     background-color: #FFA323;
-    width: 24.5%;
-    height: 60px;
-    margin-top: 195px;
-    margin-left: -0.5%;
+    z-index: -1;
+    width: 21%;
+    height: 80px;
+    margin-left: -0.65%;
+    margin-top: -250px;
+    transition: height 0.5s;
+    transition-delay: 0.5s;
 }
-body .our-chefs .border2{
-    position: relative;
+body .team_our_chefs .our_chefs .bag_team_our_chefs div:last-child{
+    position: absolute;
     background-color: #FFA323;
-    width: 5%;
-    height: 425px;
-    margin-top: -240px;
-    margin-left: 9%;
+    z-index: -1;
+    width: 6%;
+    height: 442px;
+    margin-left: 7%;
+    margin-top: -435px;
+    transition: width 0.5s;
+    transition-delay: 0.5s;
 }
 
-
-body .our-chefs .border1:hover{
-    position: relative;
-    background-color: red;
-    width: 24.5%;
-    height: 60px;
-    margin-top: 195px;
-    margin-left: -0.5%;
+body .team_our_chefs .our_chefs:hover .bag_team_our_chefs div:first-child{
+    position: absolute;
+    background-color: #FFA323;
+    width: 21%;
+    height: 380px;
+    margin-left: -0.6%;
+    margin-top: -420px;
+    transition: height 0.5s;
+    transition-delay: 0.5s;
 }
-body .our-chefs .border2:hover{
-    position: relative;
-    background-color: red;
-    width: 5%;
-    height: 425px;
-    margin-top: -240px;
-    margin-left: 9%;
+body .team_our_chefs .our_chefs:hover .bag_team_our_chefs div:last-child{
+    position: absolute;
+    background-color: #FFA323;
+    width: 15%;
+    height: 476px;
+    margin-left: 2.4%;
+    margin-top: -469px;
+    transition: width 0.5s;
+    transition-delay: 0.5s;
 }
-
-
-
-
-
-
 /**** Fin Debut Team -- Our Chefs ****/
+
+
+/********* Debit Footer *********/
+body footer{
+    width: 100%;
+    margin-top: 100px;
+}
+body footer .footer{
+    background-color: black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+body footer svg{
+    width: 14%;
+}
+body footer p{
+    text-align: center;
+    font-size: 80%;
+}
+/********* Fin Footer *********/
