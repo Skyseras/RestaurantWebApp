@@ -43,4 +43,67 @@ header .main_1 .title h1{
     color: white;
     font-family: Arial Rounded MT ;
 }
-
+@media only screen and (max-width:1077px){
+    header .main_1 .title h1{
+        font-size: 25px;
+    }
+    header .main_1 .title h1 span{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:844px){
+    header .main_1 .title h1{
+        font-size: 20px;
+    }
+    header .main_1 .title h1 span{
+        font-size: small;
+    }
+}
+@media only screen and (max-width:678px){
+    header .main_1 .title h1{
+        font-size: 17px;
+    }
+    header .main_1 .title h1 span{
+        font-size: small;
+    }
+    header .main_1 a{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:500px){
+    header .main_1 .title{
+        padding: 1% 1% 1% 2%;
+    }
+    header .main_1 .title h1{
+        width: 100%;
+        font-size: 17px;
+    }
+    header .main_1 .title h1 span{
+        font-size: small;
+    }
+}
+@media only screen and (max-width:429px){
+ header .main_1{
+    display: none;
+ }
+}
+header .main_1 a{
+    position: relative;
+    left: 5%;
+    top: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0.5% 2%;
+}
+header .main_1 a:hover{
+    background-color: #FFC420;
+    padding: 0.6% 2.1%;
+}
+@media only screen and (max-width:477px){
+    header .main_1 a{
+       position: relative;
+       top: 12px;
+    }
+    
+   }
