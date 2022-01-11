@@ -15,44 +15,39 @@
 <body>
     <!--///////////////////////////////////////////HEADER//////////////////////////////////////////////////-->
     <header>
-        <div class="header">
-            <div class="navigation1">
-                <nav role="navigation">
-                    <div class="menuToggle1">
-                    <input type="checkbox"/>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul class="menu1">
-                        <img style="width: 200px;" src="Icons\YoumealB.svg" alt="logo">
-                        <div style="height: 10vh;"></div>
-                        <a href="#Today" target="_top"><li>Today's menu</li></a>
-                        <a href="#Week" target="_top"><li>This Week's menu</li></a>
-                        <a href="#Rate" target="_top"><li>Rate your favorite</li></a>
-                        <a href="#New" target="_top"><li>New meals</li></a>
-                    </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="logo">
-                <div>
-                    <a href="index.html"><img src="Icons\YoumealB.svg" alt="logo"></a>
-                </div>
-            </div>
-            <div class="navigation2">
-                <div style="text-align: center;" class="menuToggle2">
-                    <a href="profil.html"><i style="font-size: 30px; color: black;" class="fa fa-user" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="nav">
-                <ul class="navbar">
-                    <li><a href="#Today">Today's menu</a></li>
-                    <li><a href="#Week">This Week's menu</a></li>
-                    <li><a href="#Rate">Rate your favorite</a></li>
-                    <li><a href="#New">New meals</a></li>
-                    <li id="pad"><a href="profil.html">My profil</a></li>
+        <input type="checkbox" id="check">
+        <nav class="liste-header">
+            <img src="images/icon.svg" alt="photo" class="logo">
+            <img src="./images/icon-responsive.svg" alt="" class="logo-menu">
+            <a href="#Today">Today's menu</a>
+            <a href="#Week">This Week's menu</a>
+            <a href="#Rate">Rate your favorite</a>
+            <a href="#New">New meals</a>
+            <a href="profil.html">my profile</a>
+            <ul>
+                <li>Eat, Meet & Rate</li>
+            </ul>
+        </nav>
+        <label for="check" class="icon">&#9776;</label>
+        <nav class="button-login">
+            <button>log-in</button>
+        </nav>
+        <div class="profile-generale">
+            <input type="checkbox" id="toggel">
+            <nav class="profile">
+                <img src="./images/icon-responsive.svg" alt="" class="logo-menu">
+                <h4>Welcome back!</h4>
+                <h3>full name</h3>
+                <img src="images/profiledit.svg" class="your-profile" alt="">
+                <a href="profil.html" target="_blank">Edit profile picture</a>
+                <a href="profil.html" target="_blank">Edit profile</a>
+                <a href="#">déconnexion</a>
+                <ul>
+                    <li>Eat, Meet & Rate</li>
+                    <span>Its time to rate our app!</span>
                 </ul>
-            </div>
+            </nav>
+            <label for="toggel"></label>
         </div>
     </header>
     <!--///////////////////////////////////////////MAIN////////////////////////////////////////////////////-->
@@ -211,7 +206,7 @@
                                         <a href="#3" title="Donner 3 étoiles">☆</a>
                                         <a href="#4" title="Donner 4 étoiles">☆</a>
                                         <a href="#5" title="Donner 5 étoiles">☆</a>
-                                     </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -245,7 +240,7 @@
                                         <a href="#3" title="Donner 3 étoiles">☆</a>
                                         <a href="#4" title="Donner 4 étoiles">☆</a>
                                         <a href="#5" title="Donner 5 étoile">☆</a>
-                                     </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +309,9 @@
             <img src="Icons/YoumealW.svg" alt="logo">
         </div>
         <div class="footer2">
-            <div><h6>All product names, logos, brands and dogs are property of their respective owners. Feel free to check out our privacy policy and terms of service.</h6></div>
+            <div>
+                <h6>All product names, logos, brands and dogs are property of their respective owners. Feel free to check out our privacy policy and terms of service.</h6>
+            </div>
         </div>
     </footer>
 </body>
