@@ -214,7 +214,7 @@ header .profile-generale label::before {
     header label {
         display: block;
     }
-    header .logo {
+    header .div-logo {
         display: none;
     }
     header .liste-header {
