@@ -140,8 +140,8 @@
 }
 
 header {
-    width: 92%;
-    margin: 10px auto;
+    width: 90%;
+    margin: 22px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -150,8 +150,7 @@ header {
 }
 
 header .logo {
-    width: 12%;
-    vertical-align: middle;
+    width: 168px;
 }
 
 header .liste-header a {
@@ -167,14 +166,6 @@ header .liste-header a:hover {
 
 header .liste-header ul {
     display: none;
-}
-
-header .button-login button {
-    width: 73px;
-    height: 28px;
-    background-color: #FFC420;
-    border: none;
-    border-radius: 5px;
 }
 
 header label {
@@ -203,7 +194,7 @@ header .profile-generale .profile {
 header .profile-generale .profile a {
     text-decoration: none;
     color: #000;
-    margin-top: 35px;
+    margin-top: 24px;
 }
 
 header .profile-generale label::before {
@@ -228,9 +219,9 @@ header .profile-generale label::before {
     }
     header .liste-header {
         position: fixed;
-        top: 1px;
+        top: 0px;
         left: -485px;
-        height: 751px;
+        height: 762px;
         width: 49%;
         background-color: #FFC420;
         border-radius: 10px;
@@ -247,18 +238,14 @@ header .profile-generale label::before {
         display: block;
         color: white;
         position: absolute;
-        bottom: 72px;
-        right: 32px;
-        list-style: none;
+        bottom: 108px;
+        left: 23px;
         font-size: 20px;
-    }
-    header .button-login {
-        display: none;
     }
     header .profile-generale .profile {
         position: fixed;
-        top: -779px;
-        left: 55%;
+        top: 0px;
+        left: 110%;
         width: 50%;
         height: 762px;
         display: flex;
@@ -269,7 +256,7 @@ header .profile-generale label::before {
         z-index: -1;
     }
     header .profile-generale #toggel:checked+.profile {
-        top: 0px;
+        left: 55%;
         transition: 0.8s;
     }
     header .profile-generale .your-profile {
@@ -278,9 +265,8 @@ header .profile-generale label::before {
     }
     header .profile-generale .profile ul {
         position: absolute;
-        bottom: 33px;
+        bottom: 108px;
         color: white;
-        text-align: center;
         font-size: 20px;
     }
     header .profile-generale .profile ul span {
