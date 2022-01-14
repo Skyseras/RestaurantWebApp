@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     list-style: none;
@@ -7,6 +7,27 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+
+@media screen and (min-width: 710px){
+    header{
+        padding: 0 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* login starts */
@@ -84,10 +105,10 @@
     width: 60%;
     font-size: 15px;
     font-weight: bold;
-    color: white;
+    color: white; 
     background: black;
-    border: none;
-    border-radius: 10px;
+    border: none ; 
+    border-radius: 10px; 
     padding: 0;
     margin: 20px 0 20px 0;
 }
@@ -104,6 +125,7 @@
 .form-main [type='email'] {
     padding: 20px;
 }
+
 
 .form-main [type='email']:focus {
     border: 0;
@@ -127,155 +149,265 @@
 /* login ends */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* humbergermenu starts */
+
+.navigation1 {
+    margin-left: 20px;
+}
+
+.menuToggle1{
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0px;
+    z-index: 1;
+    background-color: white;
+    padding: 4px;
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 46%) 0 2px 5px;
+}
+
+
+.menuToggle2{
+    margin-right: 20px;
+    width: 41px;
+    height: 40px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 46%) 0 2px 5px;
+}
+
+
+
+.menuToggle1 a{
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+.menuToggle1 a:hover{
+    color: gold;
+}
+
+.menuToggle1 input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    opacity: 0;
+    z-index: 2; 
+}
+
+.menuToggle1 span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+
+.menuToggle1 span:first-child{
+transform-origin: 0% 0%;
+}
+
+.menuToggle1 span:nth-last-child(2){
+transform-origin: 0% 100%;
+}
+
+.menuToggle1 input:checked ~ span{
+opacity: 1;
+transform: rotate(45deg) translate(-2px, -1px);
+background: #232323;
+}
+
+.menuToggle1 input:checked ~ span:nth-last-child(3){
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle1 input:checked ~ span:nth-last-child(2){
+transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu1 {
+position: absolute;
+width: 300px;
+height: 120vh;
+margin: -100px 0 0 -50px;
+padding: 50px;
+padding-top: 125px;
+background: #ededed;
+
+list-style-type: none;
+transform-origin: 0% 0%;
+transform: translate(-100%, 0);
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+touch-action: none;
+}
+
+.menu1 li{
+padding: 10px 0;
+font-size: 22px;
+}
+
+.menuToggle1 input:checked ~ ul{
+    transform: none;
+    position: fixed;
+}
+
+input:checked body {
+    overflow: hidden;
+}
+
+@media screen and (min-width: 710px){
+   
+    .navigation1 {
+        display: none;
+    }
+
+    .navigation2 {
+        display: none;
+    }
+    .header .logo {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 710px){
+   
+    .header .nav {
+        display: none;
+    }
+
+    .header .logo {
+        width: 40%;
+    }
+}
 
 
 /* humbergermenu ends */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* header starts */
 
-.logo-menu {
-    display: none;
-}
 
-header {
-    width: 90%;
-    margin: 22px auto;
+.header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: relative;
-    z-index: 1;
+    align-items: center;
+    padding: 5px 0;
 }
 
-header .logo {
-    width: 168px;
+
+
+.header .nav {
+    width: 80%;
 }
 
-header .liste-header a {
+.header .logo img {
+    width: 100%;
+}
+
+.header .nav {
+    text-align: end;
+}
+
+.navbar li {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.navbar a {
     color: black;
-    text-decoration: none;
-    padding-left: 25px;
+    font-size: small;
+    padding: 0 10px;
 }
 
-header .liste-header a:hover {
-    text-decoration: underline;
-    color: #000000;
+.navbar a:hover {
+    font-weight: bold;
 }
 
-header .liste-header ul {
-    display: none;
+
+/* hover line */
+.navbar a {
+    display: inline-block;
+    text-decoration:none;
+}
+.navbar a:after {
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 1.6px solid;
+    margin: 0 auto;
+    transition:all 0.3s linear 0s;
+}
+ 
+.navbar a:hover:after {
+    width: 90%;
 }
 
-header label {
-    font-size: 34px;
-    cursor: pointer;
-    width: 46px;
-    height: 49px;
-    padding: 7px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 46%);
-    display: none;
-}
 
-header input {
-    display: none;
+.navbar #pad a {
+    padding: 0 0 0 10px;
 }
-
-header .profile-generale {
-    display: none;
-}
-
-header .profile-generale .profile {
-    display: none;
-}
-
-header .profile-generale .profile a {
-    text-decoration: none;
-    color: #000;
-    margin-top: 24px;
-}
-
-header .profile-generale label::before {
-    content: "\f2be";
-    font-family: "FontAwesome";
-}
-
-@media (max-width: 992px) {
-    header .profile-generale {
-        display: block;
-    }
-    .logo-menu {
-        display: block;
-        width: 43%;
-        margin: 120px 0px 30px 30px;
-    }
-    header label {
-        display: block;
-    }
-    header .div-logo {
-        display: none;
-    }
-    header .liste-header {
-        position: fixed;
-        top: 0px;
-        left: -485px;
-        height: 762px;
-        width: 49%;
-        background-color: #FFC420;
-        border-radius: 10px;
-        gap: 46px;
-        display: flex;
-        flex-direction: column;
-        z-index: -1;
-    }
-    header #check:checked+.liste-header {
-        left: 0px;
-        transition: 0.8s;
-    }
-    header .liste-header ul {
-        display: block;
-        color: white;
-        position: absolute;
-        bottom: 108px;
-        left: 23px;
-        font-size: 20px;
-    }
-    header .profile-generale .profile {
-        position: fixed;
-        top: 0px;
-        left: 110%;
-        width: 50%;
-        height: 762px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #FFC420;
-        border-radius: 10px;
-        z-index: -1;
-    }
-    header .profile-generale #toggel:checked+.profile {
-        left: 55%;
-        transition: 0.8s;
-    }
-    header .profile-generale .your-profile {
-        width: 39%;
-        margin-top: 26px;
-    }
-    header .profile-generale .profile ul {
-        position: absolute;
-        bottom: 108px;
-        color: white;
-        font-size: 20px;
-    }
-    header .profile-generale .profile ul span {
-        color: black;
-    }
-}
-
 
 /* header ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* #######  main starts */
@@ -290,7 +422,6 @@ main .section1 .divider {
     background-color: black;
     text-align: center;
 }
-
 main .section1 .divider h4 {
     padding: 5px 0;
 }
@@ -299,8 +430,8 @@ main .section1 .divider h4 {
 /* divider ends */
 
 
-/* banner1 starts */
 
+/* banner1 starts */
 main .section1 .bgmain {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Visuals/home1.png");
     background-color: #cccccc;
@@ -314,15 +445,12 @@ main .section1 .bgmain {
     align-items: center;
     color: white;
 }
-
 main .section1 .bgmain h1 {
     margin: 0;
 }
-
 main .section1 .bgmain .bg1 {
     width: 40%;
 }
-
 main .section1 .bgmain .bg2 {
     width: 30%;
 }
@@ -339,55 +467,59 @@ main .section1 .divider h4 {
     text-align: center;
 }
 
+
+
+
+
 .button-28 {
-    appearance: none;
-    background-color: transparent;
-    border: 2px solid rgba(255, 196, 32, 1);
-    border-radius: 10px;
-    box-sizing: border-box;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 20px;
-    min-width: 0;
-    outline: none;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 70%;
-    will-change: transform;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 196, 32, 1);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 20px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 70%;
+  will-change: transform;
 }
 
 .button-28:disabled {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .button-28:hover {
-    color: #fff;
-    background-color: rgba(255, 196, 32, 1);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
+  color: #fff;
+  background-color: rgba(255, 196, 32, 1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }
 
 .button-28:active {
-    box-shadow: none;
-    transform: translateY(0);
+  box-shadow: none;
+  transform: translateY(0);
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 620px){
     main .section1 .bgmain .bg2 {
-        display: none;
+        display: none;    
     }
     main .section1 .bgmain .bg1 {
-        width: 100%;
+        width: 100%;    
         text-align: center;
     }
     main .section1 h4 {
@@ -404,12 +536,11 @@ main .section1 .divider h4 {
 
 /* today's start */
 
-main h1,
-h4 {
+main h1, h4{
     text-align: center;
 }
 
-#Today h4 {
+#Today h4{
     color: rgba(255, 196, 32, 1);
 }
 
@@ -426,7 +557,7 @@ main .todaymeal .m1 {
     min-width: 180px;
     border-radius: 20px;
     padding: 0 0 10px 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
 
 main .todaymeal .m2 {
@@ -435,18 +566,15 @@ main .todaymeal .m2 {
     min-width: 180px;
     border-radius: 20px;
     padding: 0 0 10px 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
 
 main .todaymeal button {
     margin: 10px 0;
 }
-
-main .todaymeal h3,
-p {
+main .todaymeal h3, p {
     margin: 10px 0;
 }
-
 main .todaymeal img {
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -465,6 +593,7 @@ main .todaymeal .button-28 {
 /* today's ends */
 
 
+
 /* week start */
 
 .weekmeal {
@@ -473,7 +602,6 @@ main .todaymeal .button-28 {
     align-items: center;
     width: 100%;
 }
-
 .weekmeal div {
     margin: 10px;
 }
@@ -482,13 +610,13 @@ main .todaymeal .button-28 {
     font-size: 10px;
 }
 
+
 .weekmeal2 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
-
 .weekmeal2 div {
     margin: 10px;
 }
@@ -512,7 +640,9 @@ main .todaymeal .button-28 {
     max-width: 100px;
 }
 
-@media screen and (max-width: 810px) {
+
+@media screen and (max-width: 810px){
+   
     .todaymeal {
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -522,9 +652,8 @@ main .todaymeal .button-28 {
         justify-content: space-evenly;
     }
 }
-
-
 /* week ends */
+
 
 
 /* rate start */
@@ -544,41 +673,36 @@ main .todaymeal .button-28 {
 .todaymeal .rating h3 {
     color: black;
 }
-
 .rating .m1 {
     background-color: white;
 }
-
 .rat1 {
     width: 40%;
     text-align: start;
-}
-
+} 
 .rat1 p {
     font-size: 12px;
-}
+} 
 
 .rat2 {
     width: 60%;
     text-align: start;
     padding: 30px;
-}
-
-.rat2 p {
+} 
+.rat2 p{
     font-size: 10px;
-}
+} 
 
-.rat2 .stars {
+.rat2 .stars  {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .rat2 .stars .all {
     width: 40%;
 }
 
-.rat2 .stars .all h4 {
+.rat2 .stars .all h4{
     text-align: start;
 }
 
@@ -587,33 +711,35 @@ main .todaymeal .button-28 {
 }
 
 
+
+
+
+
 /**Debut  Etoiles **/
 
-body main #rete2 .rating1 {
+body main #rete2 .rating1{
     min-width: 30%;
 }
 
-body .rating1 a {
+body  .rating1 a {
     color: black;
     text-decoration: none;
     font-size: 25px;
     float: right;
 }
 
-.rating1 a:focus,
-.rating1 a:hover,
-.rating1 a:hover~a,
-.rating1 a:focus~a {
+.rating1 a:focus, .rating1 a:hover, .rating1 a:hover ~ a, .rating1 a:focus ~ a {
     color: white;
 }
-
 
 /**Fin Etoile **/
 
 
+
+
 /* comment box */
 
-#Rate .rat2 textarea {
+#Rate .rat2 textarea{
     border-radius: 5px;
     border: none;
     padding: 5px;
@@ -623,8 +749,11 @@ body .rating1 a {
 }
 
 
-/* CSS */
 
+
+
+
+/* CSS */
 .button-27 {
     appearance: none;
     background-color: #000000;
@@ -666,11 +795,19 @@ body .rating1 a {
     transform: translateY(0);
 }
 
+
 main .rat2 .btn {
     text-align: center;
 }
 
-@media screen and (max-width: 620px) {
+
+
+
+
+
+
+
+@media screen and (max-width: 620px){
     .rating {
         flex-wrap: wrap;
     }
@@ -683,19 +820,31 @@ main .rat2 .btn {
     .weekmeal {
         flex-wrap: wrap;
     }
+
     #Week .todaymeal h3 {
         padding-top: 60px;
     }
+
 }
 
-@media screen and (max-width: 810px) {
+
+
+
+@media screen and (max-width: 810px){
+   
     .rating {
         width: 90%;
     }
 }
-
-
 /* rate ends */
+
+
+
+
+
+
+
+
 
 
 /* add meal starts */
@@ -712,8 +861,7 @@ main .rat2 .btn {
     width: 30%;
 }
 
-#New .btn i,
-span {
+#New .btn i, span {
     vertical-align: middle;
 }
 
@@ -744,35 +892,61 @@ span {
     margin: 5% 0;
 }
 
-@media screen and (max-width: 484px) {
+@media screen and (max-width: 484px){
+   
     #New .n2 {
         margin-top: 0px;
     }
+    
     #New .n3 {
         margin-top: 0px;
     }
 }
 
-@media screen and (max-width: 742px) {
+@media screen and (max-width: 742px){
+
     #New .btn .button-27 {
         width: 50%;
     }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 440px){
+
     #New .btn .button-27 {
         width: 80%;
     }
 }
 
 
-/* add meal ends */
 
+
+/* add meal ends */
 
 /* ####### main ends */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer start */
+
 
 .footer1 {
     background-color: black;
@@ -792,8 +966,21 @@ span {
     text-align: center;
 }
 
-
 /* footer ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* profil starts */
@@ -824,25 +1011,23 @@ span {
     text-align: center;
 }
 
-.side21,
-.side22 {
+
+.side21, .side22 {
     margin: auto;
     text-align: center;
     width: 100%;
     border-radius: 20px;
     padding: 0 0 10px 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
     height: 100%;
 }
-
 .side1 {
     text-align: center;
     width: 47%;
     border-radius: 20px;
     padding: 0 0 10px 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
-
 .side2 {
     width: 47%;
 }
@@ -854,25 +1039,25 @@ span {
     text-align: center;
 }
 
-.side23 div {
+.side23 div  {
     width: 47%;
 }
 
-.side23 div button {
+.side23 div  button {
     width: 100%;
 }
 
-.side23 div button i,
-span {
+.side23 div button i, span {
     vertical-align: middle;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 600px){
+
     .profilmenu {
         flex-wrap: wrap;
     }
-    .side1,
-    .side2 {
+    .side1, .side2{
         width: 90%;
     }
     .side2 {
@@ -880,18 +1065,26 @@ span {
     }
 }
 
-
 /* profil ends */
+
+
+
+
+
+
+
+
+
+
 
 
 /* chef panel starts */
 
-.stats #Today h3,
-h5 {
+.stats #Today h3,h5 {
     text-align: center;
 }
 
-.stats #Today p {
+.stats #Today p{
     font-size: 70px;
 }
 
@@ -900,6 +1093,8 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .one {
     display: none;
@@ -910,19 +1105,18 @@ h5 {
     margin-right: 10px;
     width: 25%;
     height: 44px;
-    border-radius: 15px;
+    border-radius: 15px ; 
     border: 3px solid black;
     overflow: hidden;
     background-color: #fff;
     background: #fff;
     position: relative;
 }
-
 .weekselect select {
     color: gray;
     font-size: 20px;
     padding: 7px 10px;
-    width: 100%;
+    width: 100%; 
 }
 
 .weekselect {
@@ -942,6 +1136,13 @@ h5 {
 .stoday h3 {
     text-align: center;
 }
+
+
+
+
+
+
+
 
 
 /* week edit */
@@ -965,8 +1166,7 @@ h5 {
     width: 50%;
 }
 
-.weekedit .btn i,
-span {
+.weekedit .btn i, span {
     vertical-align: middle;
 }
 
@@ -974,18 +1174,21 @@ span {
     text-align: center;
 }
 
-.stats #Rate p {
+.stats #Rate p{
     font-size: 15px;
 }
 
-.stats #Rate h4 {
+.stats #Rate h4{
     color: black;
 }
+
+
 
 .comment {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
 }
 
 #prof {
@@ -998,8 +1201,11 @@ span {
     font-size: 20px;
 }
 
-
 /* chef panel ends */
+
+
+
+
 
 
 /* admin panel starts */
@@ -1009,7 +1215,7 @@ main .admin {
 }
 
 main .adminpanel {
-    margin: auto;
+    margin:  auto;
     background-color: rgb(236, 236, 236);
     text-align: center;
     width: 100%;
@@ -1028,8 +1234,7 @@ main .adminpanel div {
     width: 100%;
 }
 
-.adminpanel .rclogs,
-.vlogs {
+.adminpanel .rclogs, .vlogs{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1042,18 +1247,14 @@ main .adminpanel div {
 .rclogs .button-27 {
     width: 90%;
 }
-
 .vlogs .button-27 {
     width: 90%;
 }
 
-.rclogs .button-27 i,
-span {
+.rclogs .button-27 i, span {
     vertical-align: middle;
 }
-
-.vlogs .button-27 i,
-span {
+.vlogs .button-27 i, span {
     vertical-align: middle;
 }
 
@@ -1063,13 +1264,12 @@ span {
     margin: 5px;
 }
 
+
 .logged-in {
     color: green;
-}
-
-.logged-out {
+  }
+  
+  .logged-out {
     color: red;
-}
-
-
+  }
 /* admin panel ends */
