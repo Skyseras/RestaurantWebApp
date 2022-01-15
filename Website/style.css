@@ -1201,6 +1201,41 @@ main .rat2 .btn {
     font-size: 20px;
 }
 
+
+
+@media screen and (max-width: 620px){
+    
+    .weekedit .btn .button-27 {
+        width: 75%;
+    }
+    .selector .btn {
+        width: 25%;
+    }
+    .weekselect {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .stats #Today p {
+        font-size: 50px;
+    }
+    main .todaymeal .m1 {
+        min-width: 140px;
+        margin: 10px 0;
+    }
+    main .todaymeal .m2 {
+        min-width: 140px;
+        margin: 10px 0;
+    }
+    .stats #Rate p {
+        font-size: 15px;
+    }
+    main .rat2 .btn .button-27 {
+        width: 100%;
+    }
+}
+
 /* chef panel ends */
 
 
@@ -1224,7 +1259,6 @@ main .adminpanel {
     -moz-box-shadow: 0 0 5px #999;
     -webkit-box-shadow: 0 0 5px #999;
     box-shadow: 0 0 5px #999;
-    height: 80vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1272,4 +1306,42 @@ main .adminpanel div {
   .logged-out {
     color: red;
   }
+
+
+@media screen and (max-width: 810px){
+    .adminpanel .rclogs, .vlogs {
+        flex-wrap: wrap;
+    }
+
+    .rclogs .button-27 {
+        width: 65%;
+        margin: 5px 0;
+    }
+    .vlogs .button-27 {
+        width: 65%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 620px){
+    
+    main .adminpanel {
+        flex-wrap: wrap;
+    }
+    main .adminpanel .logtype {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    
+    main .adminpanel .logtype {
+        width: 100%;
+    }
+    
+}
+
 /* admin panel ends */
